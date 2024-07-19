@@ -4,48 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applying Minds Tutoring Services | Jayashree Janardhanan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
+        
         header {
-            background-color: #35424a;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem;
         }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
         nav {
-            background-color: #003366;
-            color: white;
-            padding: 0.5rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+        
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
+        
         nav ul li a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: background-color 0.3s;
         }
+        
+        nav ul li a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
         .container {
-            width: 80%;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
-            padding: 20px;
+            padding: 2rem;
         }
+        
         .main-content {
             background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ul li:before {
+            content: "•";
+            color: var(--secondary-color);
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li a {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -54,7 +128,7 @@
         <h1>Applying Minds</h1>
         <p>Training the mind to think</p>
     </header>
-
+    
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -63,31 +137,33 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    
     <div class="container">
         <div class="main-content">
-            <h2 id="home">Welcome to Applying Minds !</h2>
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNxl3UUjgRhi6lh_KbPpikHs4d5zEng-mwxAoN7=s1360-w1360-h1020" alt="Applying Minds Tutoring" class="hero-image">
+            
+            <h2 id="home">Welcome to Applying Minds!</h2>
             <p>Unlock your full potential with personalized tutoring sessions tailored to your unique learning style and goals.</p>
-
+            
             <h2 id="services">Our Services</h2>
             <ul>
                 <li>Mathematics (Algebra, Geometry, Calculus)</li>
                 <li>Science (Physics, Chemistry, Biology)</li>
                 <li>English Language and Literature</li>
             </ul>
-
+            
             <h2 id="about">About Jayashree Janardhanan</h2>
-            <p>She is a 5-year-experienced teacher in a reputed International School, Bangalore, and formerly a 7+ years experienced tester in Cognizant Technology Solutions. She has completed her teacher training course at a reputed training institute. She has successfully completed her Cambridge teaching & learning.</p>
-
+            <p>Jayashree is a 5-year-experienced teacher in a reputed International School, Bangalore, and formerly a 7+ years experienced tester in Cognizant Technology Solutions. She has completed her teacher training course at a reputed training institute and has successfully completed her Cambridge teaching & learning certification.</p>
+            
             <h2 id="contact">Contact Us</h2>
             <p>Ready to start your journey towards academic success? Contact us today!</p>
-            <p>Email: janardhanan.jayashree@gmail.com </p>
+            <p>Email: janardhanan.jayashree@gmail.com</p>
             <p>Phone: +91 73377 39163</p>
         </div>
     </div>
-
+    
     <footer>
-        <p style="text-align: center; padding: 10px; background-color: #35424a; color: white; margin-top: 20px;">&copy; 2023 Jane Doe Tutoring Services. All rights reserved.</p>
+        <p>&copy; 2023 Applying Minds Tutoring Services. All rights reserved.</p>
     </footer>
 </body>
 </html>
