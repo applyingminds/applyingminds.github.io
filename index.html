@@ -31,6 +31,11 @@
             color: white;
             text-align: center;
             padding: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        header.hidden {
+            transform: translateY(-100%);
         }
         
         header h1 {
@@ -155,7 +160,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <h1>Applying Minds</h1>
         <p>Training the mind to think</p>
     </header>
@@ -196,5 +201,25 @@
     <footer>
         <p>&copy; 2023 Applying Minds Tutoring Services. All rights reserved.</p>
     </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('site-header');
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth <= 768) {  // Only for mobile devices
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }
+        }, false);
+    </script>
 </body>
 </html>
